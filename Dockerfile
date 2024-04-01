@@ -1,9 +1,9 @@
-FROM node
+FROM node:latest
 WORKDIR /app
 
 COPY . .
-EXPOSE 3000
+EXPOSE 8080
 
 COPY package*.json ./
 
-ENTRYPOINT start npm
+ENTRYPOINT ["start npm"]
